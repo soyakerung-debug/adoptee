@@ -1,7 +1,23 @@
+// ================= BASE URL =================
+const BASE_URL = "https://adoptee-backend.onrender.com";
+
+// ================= ELEMENTS =================
 const form = document.getElementById("contactForm");
 const msg = document.getElementById("successMsg");
 
-form.addEventListener("submit", async function(e) {
+// ================= POPUP =================
+function showMessage(text, success = true) {
+    msg.textContent = text;
+    msg.style.display = "block";
+    msg.style.color = success ? "green" : "red";
+
+    setTimeout(() => {
+        msg.style.display = "none";
+    }, 3000);
+}
+
+// ================= FORM SUBMIT =================
+form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     let valid = true;
@@ -37,11 +53,14 @@ form.addEventListener("submit", async function(e) {
         valid = false;
     }
 
-    if (!valid) return;
+    if (!valid) {
+        showMessage("Please fix errors ❌", false);
+        return;
+    }
 
     // ===== SEND TO BACKEND =====
     try {
-        const res = await fetch("http://localhost:5000/contact", {
+        const res = await fetch(`${BASE_URL}/contact`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -57,18 +76,14 @@ form.addEventListener("submit", async function(e) {
         const data = await res.json();
 
         if (data.success) {
-            msg.style.display = "block";
+            showMessage("Message sent successfully! 🐾", true);
             form.reset();
-
-            setTimeout(() => {
-                msg.style.display = "none";
-            }, 3000);
         } else {
-            alert("Failed to send ❌");
+            showMessage("Failed to send ❌", false);
         }
 
     } catch (err) {
         console.error(err);
-        alert("Server error ⚠️");
+        showMessage("Server error ⚠️", false);
     }
 });

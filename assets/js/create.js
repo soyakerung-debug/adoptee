@@ -1,3 +1,6 @@
+// ================= BASE URL =================
+const BASE_URL = "https://adoptee-backend.onrender.com";
+
 // ================= PASSWORD TOGGLE =================
 const eye1 = document.getElementById("eye1");
 const eye2 = document.getElementById("eye2");
@@ -27,22 +30,18 @@ form.addEventListener("submit", async function (e) {
 
     // ===== VALIDATION =====
     if (!name || !email || !pass || !confirm) {
-        popup.textContent = "Please fill all fields ❌";
-        popup.classList.add("show");
-        setTimeout(() => popup.classList.remove("show"), 2000);
+        showPopup("Please fill all fields ❌");
         return;
     }
 
     if (pass !== confirm) {
-        popup.textContent = "Passwords do not match ❌";
-        popup.classList.add("show");
-        setTimeout(() => popup.classList.remove("show"), 2000);
+        showPopup("Passwords do not match ❌");
         return;
     }
 
     // ===== SEND TO BACKEND =====
     try {
-        const res = await fetch("http://localhost:5000/signup", {
+        const res = await fetch(`${BASE_URL}/signup`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -57,25 +56,28 @@ form.addEventListener("submit", async function (e) {
         const data = await res.json();
 
         if (data.success) {
-            popup.textContent = "Account created! 🐾";
-            popup.classList.add("show");
+            showPopup("Account created! 🐾");
 
             setTimeout(() => {
                 window.location.href = "signin.html";
             }, 1500);
 
         } else {
-            popup.textContent = data.message || "Signup failed ❌";
-            popup.classList.add("show");
-
-            setTimeout(() => popup.classList.remove("show"), 2000);
+            showPopup(data.message || "Signup failed ❌");
         }
 
     } catch (err) {
         console.error(err);
-        popup.textContent = "Server error ⚠️";
-        popup.classList.add("show");
-
-        setTimeout(() => popup.classList.remove("show"), 2000);
+        showPopup("Server error ⚠️");
     }
 });
+
+// ================= POPUP FUNCTION =================
+function showPopup(message) {
+    popup.textContent = message;
+    popup.classList.add("show");
+
+    setTimeout(() => {
+        popup.classList.remove("show");
+    }, 2000);
+}

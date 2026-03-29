@@ -1,15 +1,13 @@
+// ================= BASE URL =================
+const BASE_URL = "https://adoptee-backend.onrender.com";
+
 // ================= PASSWORD TOGGLE =================
 const eye = document.querySelector(".toggle-eye");
 const password = document.getElementById("password");
 
 eye.addEventListener("click", () => {
-    if (password.type === "password") {
-        password.type = "text";
-        eye.textContent = "🙈";
-    } else {
-        password.type = "password";
-        eye.textContent = "👁️";
-    }
+    password.type = password.type === "password" ? "text" : "password";
+    eye.textContent = password.type === "password" ? "👁️" : "🙈";
 });
 
 // ================= ELEMENTS =================
@@ -69,6 +67,16 @@ function wiggle(el) {
     setTimeout(() => el.style.animation = "", 400);
 }
 
+// ================= POPUP =================
+function showPopup(message) {
+    popup.textContent = message;
+    popup.classList.add("show");
+
+    setTimeout(() => {
+        popup.classList.remove("show");
+    }, 2000);
+}
+
 // ================= FORM SUBMIT =================
 form.addEventListener("submit", async function (e) {
     e.preventDefault();
@@ -93,7 +101,7 @@ form.addEventListener("submit", async function (e) {
 
     // ===== BACKEND LOGIN =====
     try {
-        const res = await fetch("http://localhost:5000/login", {
+        const res = await fetch(`${BASE_URL}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -127,8 +135,7 @@ form.addEventListener("submit", async function (e) {
             setTimeout(() => container.style.transform = "scale(1)", 300);
 
             // ✅ Popup
-            popup.textContent = "Welcome " + data.name + " 🐾";
-            popup.classList.add("show");
+            showPopup("Welcome " + data.name + " 🐾");
 
             // 🔄 Redirect
             setTimeout(() => {
@@ -136,22 +143,11 @@ form.addEventListener("submit", async function (e) {
             }, 1500);
 
         } else {
-            popup.textContent = "Invalid email or password ❌";
-            popup.classList.add("show");
-
-            setTimeout(() => {
-                popup.classList.remove("show");
-            }, 2000);
+            showPopup(data.message || "Invalid email or password ❌");
         }
 
     } catch (err) {
-        popup.textContent = "Server error ⚠️";
-        popup.classList.add("show");
-
-        setTimeout(() => {
-            popup.classList.remove("show");
-        }, 2000);
-
         console.error(err);
+        showPopup("Server error ⚠️");
     }
 });
