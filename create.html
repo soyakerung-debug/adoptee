@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Adoptee</title>
+
+    <link rel="stylesheet" href="assets/css/create.css">
+</head>
+<body>
+
+<!-- FLOATING PAWS -->
+<div class="paw paw1">🐾</div>
+<div class="paw paw2">🐾</div>
+<div class="paw paw3">🐾</div>
+
+<!-- ================= NAVBAR ================= -->
+<header class="header">
+    <div class="nav">
+        <img src="assets/images/pets/Screenshot_2026-01-24_135920-removebg-preview.png" class="logo">
+        <a href="index.html" class="nav-btn">Home</a>
+    </div>
+</header>
+
+<!-- ================= MAIN ================= -->
+<section class="signup-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="signup-image">
+        <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
+        <div class="image-overlay">Join the Paw Family 🐶</div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="signup-form">
+
+        <h2>Create Your Account</h2>
+        <p class="subtitle">Start your adoption journey today</p>
+
+        <form id="signupForm">
+
+            <!-- ✅ NAME -->
+            <input type="text" id="name" placeholder="Full Name" required>
+
+            <!-- ✅ EMAIL -->
+            <input type="email" id="email" placeholder="Email address" required>
+
+            <!-- ✅ PASSWORD -->
+            <div class="password-box">
+                <input type="password" id="password" placeholder="Password" required>
+                <span class="toggle-eye" id="eye1">👁️</span>
+            </div>
+
+            <!-- ✅ CONFIRM PASSWORD -->
+            <div class="password-box">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <span class="toggle-eye" id="eye2">👁️</span>
+            </div>
+
+            <button type="submit">Join Now 🐾</button>
+
+            <p class="extra">
+                Already have an account? <a href="signin.html">Sign in</a>
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- POPUP -->
+<div id="popup" class="success-popup">Account created! 🐾</div>
+
+<script src="assets/js/create.js"></script>
+
+</body>
+</html>

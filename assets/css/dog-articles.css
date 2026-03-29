@@ -1,0 +1,328 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+/* HEADER BACKGROUND */
+.header {
+    background: #f5efe6; /* soft light cream */
+    padding: 12px 40px;
+}
+
+/* NAV LAYOUT */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LEFT SIDE */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* LOGO */
+.logo img {
+    width: 65px;
+    display: block;
+}
+
+/* BUTTON STYLE */
+.pill-btn {
+    text-decoration: none;
+    background: #c97a1c;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.25s ease;
+}
+
+/* HOVER EFFECT */
+.pill-btn:hover {
+    background: #e18a2d;
+    transform: translateY(-2px);
+}
+
+/* SIGN IN BUTTON */
+.sign-in {
+    background: #c97a1c;
+}
+
+.sign-in:hover {
+    background: #c97a1c;
+}
+
+/* RIGHT SIDE */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-left {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pill-btn {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+}
+/* ================= HERO ================= */
+.dog-hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+    url('../images/pets/cutttt.jpg');
+    background-size: cover;
+    background-position: center;
+
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+}
+
+.dog-hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.dog-hero p {
+    font-size: 18px;
+}
+
+/* ================= SECTION ================= */
+.dog-section {
+    background: #c9c05e;
+    padding: 80px 20px;
+}
+
+/* ================= ARTICLES ================= */
+.dog-article {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+
+    max-width: 950px;
+    margin: 0 auto 50px auto;
+
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.dog-article:hover {
+    transform: translateY(-8px) scale(1.01);
+}
+
+.dog-article.reverse {
+    flex-direction: row-reverse;
+}
+
+/* IMAGE */
+.dog-article img {
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* TEXT */
+.dog-text {
+    flex: 1;
+}
+
+.dog-text h2 {
+    color: #c97a1c;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.dog-text h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 18px;
+}
+
+.dog-text p {
+    color: #555;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.dog-text ul {
+    margin: 10px 0 15px 20px;
+    color: #444;
+}
+
+.dog-text ul li {
+    margin-bottom: 6px;
+}
+
+/* ================= FUN SECTION ================= */
+.dog-fun {
+    background: #e6d8b3;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.dog-fun h2 {
+    color: #c97a1c;
+    margin-bottom: 10px;
+}
+
+.dog-fun p {
+    color: #444;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background-color: #ffffff;
+  padding: 30px 40px 15px;
+  border-top: 2px solid #e5e5e5;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.footer-about {
+  text-align: center;
+}
+
+.footer-about img {
+  width: 90px;
+  margin: 0 auto 10px auto;
+}
+
+.footer-about p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #c97a1c;
+}
+
+.footer-links h4,
+.footer-adoption h4,
+.footer-contact h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #c97a1c;
+}
+
+.footer-links ul,
+.footer-adoption ul,
+.footer-contact ul {
+  list-style: none;
+}
+
+.footer-links ul li,
+.footer-adoption ul li,
+.footer-contact ul li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #c97a1c;
+}
+
+.footer-links a,
+.footer-adoption a {
+  text-decoration: none;
+  color: #c97a1c;
+}
+
+.footer-links a:hover,
+.footer-adoption a:hover {
+  text-decoration: underline;
+}
+
+/* SOCIAL */
+.social-icons {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 35px;
+  transition: 0.2s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #c97a1c;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-left {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dog-article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dog-article.reverse {
+        flex-direction: column;
+    }
+
+    .dog-article img {
+        width: 100%;
+        height: auto;
+    }
+
+    .dog-text {
+        text-align: left;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,330 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e6d8b3;
+    color: #6b4b1f;
+    line-height: 1.5;
+}
+
+/* ================= HEADER ================= */
+.header {
+    padding: 20px 60px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo img {
+    width: 70px;
+}
+
+/* BUTTONS */
+.btn {
+    background: #c97a1c;
+    color: #fff;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #a86114;
+    transform: translateY(-2px);
+}
+
+/* ================= HERO ================= */
+.hero {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 110px 20px;
+    border-radius: 30px;
+
+    background:
+        linear-gradient(rgba(88, 73, 59, 0.65), rgba(77, 65, 52, 0.65)),
+        url('../images/pets/faq.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #fff;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #fcefd6;
+    font-size: 15px;
+}
+
+/* ================= FAQ ================= */
+.faq {
+    width: 90%;
+    max-width: 850px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.faq h2 {
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.sub {
+    color: #9c6b1c;
+    margin-bottom: 50px;
+}
+
+/* FAQ LIST */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* FAQ CARD */
+.faq-item {
+    background: #fff;
+    padding: 22px 25px;
+    border-radius: 20px;
+    text-align: left;
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+    transition: all 0.35s ease;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.faq-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* hover */
+.faq-item:hover {
+    transform: translateY(-6px);
+}
+
+/* QUESTION */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question h3 {
+    color: #c97a1c;
+    font-size: 16px;
+}
+
+/* ICON */
+.faq-question span {
+    font-size: 22px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* ANSWER */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, margin 0.3s ease;
+    color: #8a6a3a;
+    font-size: 14px;
+}
+
+/* ACTIVE */
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    margin-top: 10px;
+}
+
+.faq-item.active span {
+    transform: rotate(45deg);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #fff;
+    padding: 25px 40px 15px;
+    border-top: 2px solid #e5e5e5;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-about {
+    text-align: center;
+}
+
+.footer-about img {
+    width: 90px;
+    display: block;
+    margin: 0 auto 6px auto;
+}
+
+.footer-about p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #c97a1c;
+}
+
+.footer-links h4,
+.footer-adoption h4,
+.footer-contact h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #c97a1c;
+}
+
+.footer-links ul,
+.footer-adoption ul,
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li,
+.footer-adoption ul li,
+.footer-contact ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #c97a1c;
+}
+
+.footer-links a,
+.footer-adoption a {
+    text-decoration: none;
+    color: #c97a1c;
+}
+
+.footer-links a:hover,
+.footer-adoption a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 6px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    transition: 0.2s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #c97a1c;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 8px;
+}
+/* Media */
+@media(max-width:768px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    #hamster {
+        width: 200px;
+        top: 50px;
+    }
+
+    .article-card {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+    }
+
+    .article-card img {
+        margin-bottom: 10px;
+    }
+
+    .animal-cards {
+        gap: 15px;
+    }
+
+    .card {
+        width: 120px;
+        height: 140px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}  
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px) {
+    .header {
+        padding: 20px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .faq {
+        margin: 60px auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
