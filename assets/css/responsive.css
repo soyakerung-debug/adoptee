@@ -1,0 +1,173 @@
+/* ===== GLOBAL MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+    /* ===== HEADER ===== */
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-left,
+    .nav-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    /* ===== SEARCH ===== */
+    .search-container {
+        width: 90%;
+    }
+
+    .search-container input {
+        font-size: 14px;
+        padding: 10px 35px 10px 12px;
+    }
+
+    .search-icon img {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+        padding: 50px 20px;
+        margin: 20px;
+        border-radius: 20px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    /* ===== ANIMAL CARDS ===== */
+    .animal-cards {
+        gap: 15px;
+    }
+
+    .card {
+        width: 100px;
+        height: 120px;
+    }
+
+    .card img {
+        width: 45px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    /* ===== ARTICLES ===== */
+    .articles {
+        padding: 60px 10px;
+    }
+
+    .article-card {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .article-img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .article-content h2 {
+        font-size: 16px;
+    }
+
+    .article-content p {
+        font-size: 13px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .about-image {
+        width: 200px;
+    }
+
+    .img-main {
+        height: 200px;
+    }
+
+    .about h2 {
+        font-size: 26px;
+    }
+
+    .about p {
+        font-size: 14px;
+    }
+
+    /* ===== REVIEWS ===== */
+    .review-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-about img {
+        width: 70px;
+    }
+
+    .footer-about p {
+        font-size: 12px;
+    }
+
+    .footer-links h4,
+    .footer-adoption h4 {
+        font-size: 13px;
+    }
+
+    .footer-links ul li,
+    .footer-adoption ul li,
+    .footer-contact ul li {
+        font-size: 12px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .social-icons img {
+        width: 30px;
+    }
+
+    .footer-bottom {
+        font-size: 11px;
+    }
+}
