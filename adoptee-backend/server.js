@@ -173,3 +173,19 @@ app.post("/adopt", async (req, res) => {
     res.status(500).json({ success: false });
   }
 });
+app.post("/forgot-password", async (req, res) => {
+    const { email } = req.body;
+
+    // check user
+    const user = await User.findOne({ email });
+
+    if (!user) {
+        return res.json({ success: false, message: "User not found" });
+    }
+
+    // normally you'd send email here (nodemailer)
+    console.log("Reset link sent to:", email);
+
+    res.json({ success: true });
+    
+});
