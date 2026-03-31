@@ -1,3 +1,4 @@
+const Adoption = require("./models/adoption");
 // ===== ENV CONFIG =====
 require("dotenv").config();
 
@@ -158,4 +159,17 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT} 🚀`);
+});
+// ================= ADOPTION =================
+app.post("/adopt", async (req, res) => {
+  try {
+    const newAdoption = new Adoption(req.body);
+    await newAdoption.save();
+
+    res.json({ success: true });
+
+  } catch (err) {
+    console.log("Adoption error ❌", err);
+    res.status(500).json({ success: false });
+  }
 });
