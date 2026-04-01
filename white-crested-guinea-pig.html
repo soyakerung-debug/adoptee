@@ -1,108 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Thumper - White Crested Guinea Pig</title>
-<link rel="stylesheet" href="assets/css/thumper.css">
+  <meta charset="UTF-8">
+  <title>Thumper - White Crested Guinea Pig</title>
+  <link rel="stylesheet" href="assets/css/thumper.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
+
 <body>
 
-<div class="container">
-  <div class="card">
+  <div class="container">
+    <div class="card">
 
-    <div class="image-section">
-      <img src="assets/images/pets/white-crested-guinea-pig_Bad_Bear_Pictures-Pixabay-1.webp" alt="Thumper">
-    </div>
-
-    <div class="info-section">
-      <h1>Thumper 🐹</h1>
-      <h2>White Crested Guinea Pig</h2>
-
-      <div class="badges">
-        <span>Calm</span>
-        <span>Gentle</span>
-        <span>Beginner Friendly</span>
+      <div class="image-section">
+        <img src="assets/images/pets/white-crested-guinea-pig_Bad_Bear_Pictures-Pixabay-1.webp" alt="Thumper">
       </div>
 
-      <p><strong>Breed:</strong> White Crested Guinea Pig</p>
-      <p><strong>Age:</strong> 5 months</p>
-      <p><strong>Price:</strong> ₹2,000</p>
+      <div class="info-section">
+        <h1>Thumper 🐹</h1>
+        <h2>White Crested Guinea Pig</h2>
 
-      <p class="desc">
-        Thumper is a gentle White Crested guinea pig known for the unique white patch on its head.
-        Calm and affectionate, he enjoys quiet environments and bonding with his owner.
-      </p>
+        <div class="badges">
+          <span>Calm</span>
+          <span>Gentle</span>
+          <span>Beginner Friendly</span>
+        </div>
 
-      <button class="adopt-btn" onclick="openForm('Thumper')">Adopt Thumper</button>
-      <a href="other-animal.html" class="back">⬅ Back</a>
+        <p><strong>Breed:</strong> White Crested Guinea Pig</p>
+        <p><strong>Age:</strong> 5 months</p>
+        <p><strong>Price:</strong> ₹2,000</p>
+
+        <p class="desc">
+          Thumper is a gentle White Crested guinea pig known for the unique white patch on its head.
+          Calm and affectionate, he enjoys quiet environments and bonding with his owner.
+        </p>
+
+        <button class="adopt-btn" data-pet="Thumper">
+          Adopt Thumper
+        </button>
+        <a href="other-animal.html" class="back">⬅ Back</a>
+      </div>
+
     </div>
-
   </div>
-</div>
 
-<div id="adoptModal" class="modal">
-  <div class="modal-box">
-    <h2>Adopt Thumper 🐹</h2>
+  <div id="adoptModal" class="modal">
+    <div class="modal-box">
+      <h2>Adopt Thumper 🐹</h2>
+      <form class="purchase-form" data-pet="Thumper">
 
-    <input type="text" placeholder="Full Name">
-    <input type="email" placeholder="Email">
-    <input type="tel" placeholder="Phone Number">
-    <textarea placeholder="Why do you want to adopt Thumper?" rows="4"></textarea>
+        <input type="text" name="name" placeholder="Full Name" required>
 
-    <button onclick="submitForm()">Submit Adoption</button>
-    <button class="close-btn" onclick="closeForm()">Cancel</button>
+        <input type="email" name="email" placeholder="Email" required>
+
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <textarea name="message" placeholder="Why do you want to adopt Thumper?" rows="4" required></textarea>
+
+        <!-- ✅ THIS is correct -->
+        <button type="submit">Submit Adoption</button>
+
+        <button type="button" class="close-btn" onclick="closeForm()">Cancel</button>
+
+      </form>
+    </div>
   </div>
-</div>
 
-<footer class="footer">
+  <footer class="footer">
     <div class="footer-container">
-        <div class="footer-about">
-            <a href="index.html">
-                <img src="assets/images/pets/Screenshot_2026-01-24_135920-removebg-preview.png">
-            </a>
-            <p>Helping cats and pets find their forever homes.</p>
-            <p>We connect loving families with adorable pets looking for a second chance.</p>
-        </div>
+      <div class="footer-about">
+        <a href="index.html">
+          <img src="assets/images/pets/Screenshot_2026-01-24_135920-removebg-preview.png">
+        </a>
+        <p>Helping cats and pets find their forever homes.</p>
+        <p>We connect loving families with adorable pets looking for a second chance.</p>
+      </div>
 
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cat.html">Adopt a Cat</a></li>
-                <li><a href="dog.html">Adopt a Dog</a></li>
-            </ul>
-        </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cat.html">Adopt a Cat</a></li>
+          <li><a href="dog.html">Adopt a Dog</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-adoption">
-            <h4>Adoption Info</h4>
-            <ul>
-                <li><a href="how-it-works.html">How it works?</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="FAQs.html">FAQs</a></li>
-            </ul>
-        </div>
+      <div class="footer-adoption">
+        <h4>Adoption Info</h4>
+        <ul>
+          <li><a href="how-it-works.html">How it works?</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="FAQs.html">FAQs</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-contact">
-            <ul>
-                <li>📍 Birtamod, Jhapa</li>
-                <li>📞 9805534622</li>
-                <li>✉️ Adoptee@gmail.com</li>
-            </ul>
+      <div class="footer-contact">
+        <ul>
+          <li>📍 Birtamod, Jhapa</li>
+          <li>📞 9805534622</li>
+          <li>✉️ Adoptee@gmail.com</li>
+        </ul>
 
-            <div class="social-icons">
-                <a href="#"><img src="assets/images/pets/fb-removebg-preview (1).png"></a>
-                <a href="#"><img src="assets/images/pets/insta-removebg-preview.png"></a>
-                <a href="#"><img src="assets/images/pets/tt-removebg-preview.png"></a>
-            </div>
+        <div class="social-icons">
+          <a href="#" onclick="comingSoon(event)">
+            <img src="assets/images/pets/fb-removebg-preview (1).png">
+          </a>
+          <a href="#" onclick="comingSoon(event)">
+            <img src="assets/images/pets/insta-removebg-preview.png">
+          </a>
+          <a href="#" onclick="comingSoon(event)">
+            <img src="assets/images/pets/tt-removebg-preview.png">
+          </a>
         </div>
+      </div>
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026 Adoptee. All rights reserved.</p>
+      <p>© 2026 Adoptee. All rights reserved.</p>
     </div>
-</footer>
+  </footer>
 
-
-<script src="assets/js/thumper.js"></script>
+  <script src="assets/js/adopt.js"></script>
+  <script src="assets/js/thumper.js"></script>
 </body>
+
 </html>

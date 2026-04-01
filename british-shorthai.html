@@ -72,7 +72,7 @@
     <h2>Interested in Adopting?</h2>
     <p>Send us an inquiry and we’ll help you begin the adoption process for Whiskers, our adorable British Shorthair cat.</p>
 
-    <form class="purchase-form" action="#" method="post">
+    <form class="purchase-form" data-pet="Whiskers">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <input type="tel" name="phone" placeholder="Phone Number" required>
@@ -82,7 +82,7 @@
   </div>
 </section>
 
-<footer class="footer">
+
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-about">
@@ -119,10 +119,16 @@
             </ul>
 
             <div class="social-icons">
-                <a href="#"><img src="assets/images/pets/fb-removebg-preview (1).png"></a>
-                <a href="#"><img src="assets/images/pets/insta-removebg-preview.png"></a>
-                <a href="#"><img src="assets/images/pets/tt-removebg-preview.png"></a>
-            </div>
+                    <a href="#" onclick="comingSoon(event)">
+                        <img src="assets/images/pets/fb-removebg-preview (1).png">
+                    </a>
+                    <a href="#" onclick="comingSoon(event)">
+                        <img src="assets/images/pets/insta-removebg-preview.png">
+                    </a>
+                    <a href="#" onclick="comingSoon(event)">
+                        <img src="assets/images/pets/tt-removebg-preview.png">
+                    </a>
+                </div>
         </div>
     </div>
 
@@ -130,6 +136,7 @@
         <p>© 2026 Adoptee. All rights reserved.</p>
     </div>
 </footer>
+<script src="assets/js/adopt.js"></script>
 <script src="assets/js/british-shorthai.js"></script>
 </body>
 </html>

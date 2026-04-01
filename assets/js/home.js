@@ -173,7 +173,7 @@ function playShort(sound, duration) {
 
     sound.currentTime = 0;
     sound.volume = 1;
-    sound.play().catch(() => {});
+    sound.play().catch(() => { });
 
     setTimeout(() => {
         sound.pause();
@@ -197,10 +197,10 @@ if (pawBtn) {
         // 🎯 play with custom durations
         if (soundIndex === 0) {
             playShort(catSound, 2000); // 🐱 2 sec
-        } 
+        }
         else if (soundIndex === 1) {
             playShort(dogSound, 2000); // 🐶 2 sec
-        } 
+        }
         else {
             playShort(birdSound, 5000); // 🐦 4 sec
         }
@@ -211,4 +211,30 @@ if (pawBtn) {
         pawBtn.classList.add("clicked");
         setTimeout(() => pawBtn.classList.remove("clicked"), 300);
     });
+}
+function comingSoon(e) {
+    e.preventDefault();
+
+    const popup = document.createElement("div");
+    popup.innerText = "🚧 Social Media Coming Soon!";
+
+    popup.style.position = "fixed";
+    popup.style.bottom = "30px";
+    popup.style.left = "50%";
+    popup.style.transform = "translateX(-50%)";
+
+    // 🎨 MATCH YOUR COLOR PALETTE
+    popup.style.background = "linear-gradient(135deg, #c9c05e, #c97a1c)";
+    popup.style.color = "#fff";
+    popup.style.padding = "14px 22px";
+    popup.style.borderRadius = "25px";
+    popup.style.fontSize = "14px";
+    popup.style.boxShadow = "0 5px 15px rgba(0,0,0,0.2)";
+    popup.style.zIndex = "9999";
+
+    document.body.appendChild(popup);
+
+    setTimeout(() => {
+        popup.remove();
+    }, 2000);
 }

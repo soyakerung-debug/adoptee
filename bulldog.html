@@ -52,7 +52,7 @@
 
 <section class="adopt-section" id="adopt-form">
   <h2>Adoption Form</h2>
-  <form>
+  <form class="purchase-form" data-pet="Max">
     <label for="name">Full Name</label>
     <input type="text" id="name" name="name" required>
 
@@ -105,11 +105,17 @@
                 <li>✉️ Adoptee@gmail.com</li>
             </ul>
 
-            <div class="social-icons">
-                <a href="#"><img src="assets/images/pets/fb-removebg-preview (1).png"></a>
-                <a href="#"><img src="assets/images/pets/insta-removebg-preview.png"></a>
-                <a href="#"><img src="assets/images/pets/tt-removebg-preview.png"></a>
-            </div>
+             <div class="social-icons">
+                    <a href="#" onclick="comingSoon(event)">
+                        <img src="assets/images/pets/fb-removebg-preview (1).png">
+                    </a>
+                    <a href="#" onclick="comingSoon(event)">
+                        <img src="assets/images/pets/insta-removebg-preview.png">
+                    </a>
+                    <a href="#" onclick="comingSoon(event)">
+                        <img src="assets/images/pets/tt-removebg-preview.png">
+                    </a>
+                </div>
         </div>
     </div>
 
@@ -117,6 +123,7 @@
         <p>© 2026 Adoptee. All rights reserved.</p>
     </div>
 </footer>
+<script src="assets/js/adopt.js"></script>
 <script src="assets/js/bulldog.js"></script>
 </body>
 </html>

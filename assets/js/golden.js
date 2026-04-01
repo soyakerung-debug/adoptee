@@ -80,37 +80,32 @@ buttons.forEach(btn => {
     btn.style.transform = "scale(1)";
   });
 });
-
-// ==========================
-// Form Submission Popup
-// ==========================
-const form = document.querySelector(".adopt-section form");
-
-if (form) {
-  form.addEventListener("submit", function (e) {
+function comingSoon(e) {
     e.preventDefault();
 
     const popup = document.createElement("div");
-    popup.textContent = "🐶 Request Sent Successfully!";
+    popup.innerText = "🚧 Social Media Coming Soon!";
 
     popup.style.position = "fixed";
-    popup.style.top = "50%";
+    popup.style.bottom = "30px";
     popup.style.left = "50%";
-    popup.style.transform = "translate(-50%, -50%)";
-    popup.style.background = "#c97a1c";
+    popup.style.transform = "translateX(-50%)";
+
+    // 🎨 MATCH YOUR COLOR PALETTE
+    popup.style.background = "linear-gradient(135deg, #c9c05e, #c97a1c)";
     popup.style.color = "#fff";
-    popup.style.padding = "18px 28px";
-    popup.style.borderRadius = "12px";
-    popup.style.boxShadow = "0 8px 20px rgba(0,0,0,0.2)";
+    popup.style.padding = "14px 22px";
+    popup.style.borderRadius = "25px";
+    popup.style.fontSize = "14px";
+    popup.style.boxShadow = "0 5px 15px rgba(0,0,0,0.2)";
     popup.style.zIndex = "9999";
-    popup.style.fontSize = "15px";
 
     document.body.appendChild(popup);
 
     setTimeout(() => {
-      popup.remove();
-    }, 2200);
-
-    form.reset();
-  });
+        popup.remove();
+    }, 2000);
 }
+
+
+  

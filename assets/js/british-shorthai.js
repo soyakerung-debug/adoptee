@@ -1,6 +1,4 @@
-// ==========================
-// Fade-in on Scroll
-// ==========================
+// Fade-in
 const elements = document.querySelectorAll(
   ".hero, .breed-details, .price-card, .purchase-section"
 );
@@ -18,9 +16,7 @@ elements.forEach(el => {
   observer.observe(el);
 });
 
-// ==========================
-// Add CSS dynamically for animation
-// ==========================
+// Animation CSS
 const style = document.createElement("style");
 style.innerHTML = `
 .hidden {
@@ -35,24 +31,17 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
-// ==========================
-// Button Bounce Effect
-// ==========================
-const buttons = document.querySelectorAll(".btn");
-
-buttons.forEach(btn => {
+// Button hover
+document.querySelectorAll(".btn").forEach(btn => {
   btn.addEventListener("mouseenter", () => {
     btn.style.transform = "scale(1.1)";
   });
-
   btn.addEventListener("mouseleave", () => {
     btn.style.transform = "scale(1)";
   });
 });
 
-// ==========================
-// Image Tilt Effect
-// ==========================
+// Image tilt
 const img = document.querySelector(".breed-img");
 
 if (img) {
@@ -72,9 +61,7 @@ if (img) {
   });
 }
 
-// ==========================
-// Cute Paw Floating Effect 🐾
-// ==========================
+// Paw animation
 function createPaw() {
   const paw = document.createElement("div");
   paw.innerText = "🐾";
@@ -94,46 +81,33 @@ function createPaw() {
     paw.style.opacity = 0;
   }, 50);
 
-  setTimeout(() => {
-    paw.remove();
-  }, 3000);
+  setTimeout(() => paw.remove(), 3000);
 }
 
-// spawn paws every few seconds
 setInterval(createPaw, 2500);
-
-// ==========================
-// Form Submission Popup 💌
-// ==========================
-const form = document.querySelector(".purchase-form");
-
-if (form) {
-  form.addEventListener("submit", function (e) {
+function comingSoon(e) {
     e.preventDefault();
 
-    // Create popup
     const popup = document.createElement("div");
-    popup.innerHTML = "💖 Inquiry Sent! We'll contact you soon!";
-    
+    popup.innerText = "🚧 Social Media Coming Soon!";
+
     popup.style.position = "fixed";
-    popup.style.top = "50%";
+    popup.style.bottom = "30px";
     popup.style.left = "50%";
-    popup.style.transform = "translate(-50%, -50%)";
-    popup.style.background = "#c97a1c";
+    popup.style.transform = "translateX(-50%)";
+
+    // 🎨 MATCH YOUR COLOR PALETTE
+    popup.style.background = "linear-gradient(135deg, #c9c05e, #c97a1c)";
     popup.style.color = "#fff";
-    popup.style.padding = "20px 30px";
-    popup.style.borderRadius = "15px";
-    popup.style.boxShadow = "0 10px 25px rgba(0,0,0,0.2)";
-    popup.style.fontSize = "16px";
+    popup.style.padding = "14px 22px";
+    popup.style.borderRadius = "25px";
+    popup.style.fontSize = "14px";
+    popup.style.boxShadow = "0 5px 15px rgba(0,0,0,0.2)";
     popup.style.zIndex = "9999";
 
     document.body.appendChild(popup);
 
-    // remove popup
     setTimeout(() => {
-      popup.remove();
-    }, 2500);
-
-    form.reset();
-  });
+        popup.remove();
+    }, 2000);
 }

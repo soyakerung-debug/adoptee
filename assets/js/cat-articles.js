@@ -1,14 +1,20 @@
-// SCROLL ANIMATION
+// ==========================
+// SCROLL ANIMATIONS (ALL SECTIONS)
+// ==========================
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-}, { threshold: 0.2 });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.15 });
 
-document.querySelectorAll(".dog-card").forEach(card => {
-    observer.observe(card);
+// Target ALL sections of your page
+document.querySelectorAll(
+  ".cat-article, .cat-hero, .cat-fun, .footer"
+).forEach((el, index) => {
+  el.style.transitionDelay = `${index * 0.1}s`; // ✨ stagger effect
+  observer.observe(el);
 });
 
 // 3D TILT EFFECT

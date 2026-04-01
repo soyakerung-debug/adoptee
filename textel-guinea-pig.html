@@ -1,110 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Chewy - Textel Guinea Pig</title>
-<link rel="stylesheet" href="assets/css/chewy.css">
+  <meta charset="UTF-8">
+  <title>Chewy - Textel Guinea Pig</title>
+  <link rel="stylesheet" href="assets/css/chewy.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
+
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <div class="card">
+    <div class="card">
 
-    <div class="image-section">
-      <img src="assets/images/pets/textel-guinea-pig_joanna-wnuk-Shutterstock.webp" alt="Chewy">
-    </div>
-
-    <div class="info-section">
-      <h1>Chewy 🐹</h1>
-      <h2>Textel Guinea Pig</h2>
-
-      <div class="badges">
-        <span>Gentle</span>
-        <span>Fluffy</span>
-        <span>Playful</span>
+      <div class="image-section">
+        <img src="assets/images/pets/textel-guinea-pig_joanna-wnuk-Shutterstock.webp" alt="Chewy">
       </div>
 
-      <p><strong>Breed:</strong> Textel</p>
-      <p><strong>Age:</strong> 5 months</p>
-      <p><strong>Price:</strong> ₹1,200</p>
+      <div class="info-section">
+        <h1>Chewy 🐹</h1>
+        <h2>Textel Guinea Pig</h2>
 
-      <p class="desc">
-        Chewy is a cuddly and playful Textel guinea pig who loves exploring and interacting with humans.
-        Perfect for small families or anyone looking for a cheerful little companion.
-      </p>
+        <div class="badges">
+          <span>Gentle</span>
+          <span>Fluffy</span>
+          <span>Playful</span>
+        </div>
 
-      <button class="adopt-btn" onclick="openForm()">Adopt Chewy</button>
-      <a href="other-animal.html" class="back">⬅ Back</a>
+        <p><strong>Breed:</strong> Textel</p>
+        <p><strong>Age:</strong> 5 months</p>
+        <p><strong>Price:</strong> ₹1,200</p>
+
+        <p class="desc">
+          Chewy is a cuddly and playful Textel guinea pig who loves exploring and interacting with humans.
+          Perfect for small families or anyone looking for a cheerful little companion.
+        </p>
+
+        <button class="adopt-btn" onclick="openForm()">Adopt Chewy</button>
+        <a href="other-animal.html" class="back">⬅ Back</a>
+      </div>
+
     </div>
 
   </div>
 
-</div>
+  <div id="adoptModal" class="modal">
+    <div class="modal-box">
+      <h2>Adopt Chewy 🐹</h2>
 
-<div id="adoptModal" class="modal">
-  <div class="modal-box">
-    <h2>Adopt Chewy 🐹</h2>
+      <form class="purchase-form" data-pet="Chewy">
 
-    <input type="text" placeholder="Full Name" required>
-    <input type="email" placeholder="Email" required>
-    <input type="tel" placeholder="Phone Number" required>
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" placeholder="Why do you want to adopt Chewy?" rows="4" required></textarea>
 
-    <textarea placeholder="Why do you want to adopt Chewy?" rows="4"></textarea>
+        <button type="submit">Submit Adoption</button>
 
-    <button onclick="submitForm()">Submit Adoption</button>
-    <button class="close-btn" onclick="closeForm()">Cancel</button>
+        <button type="button" class="close-btn" onclick="closeForm()">Cancel</button>
+
+      </form>
+    </div>
   </div>
-</div>
 
-<footer class="footer">
+  <footer class="footer">
     <div class="footer-container">
-        <div class="footer-about">
-            <a href="index.html">
-                <img src="assets/images/pets/Screenshot_2026-01-24_135920-removebg-preview.png">
-            </a>
-            <p>Helping cats and pets find their forever homes.</p>
-            <p>We connect loving families with adorable pets looking for a second chance.</p>
-        </div>
+      <div class="footer-about">
+        <a href="index.html">
+          <img src="assets/images/pets/Screenshot_2026-01-24_135920-removebg-preview.png">
+        </a>
+        <p>Helping cats and pets find their forever homes.</p>
+        <p>We connect loving families with adorable pets looking for a second chance.</p>
+      </div>
 
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cat.html">Adopt a Cat</a></li>
-                <li><a href="dog.html">Adopt a Dog</a></li>
-            </ul>
-        </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cat.html">Adopt a Cat</a></li>
+          <li><a href="dog.html">Adopt a Dog</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-adoption">
-            <h4>Adoption Info</h4>
-            <ul>
-                <li><a href="how-it-works.html">How it works?</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="FAQs.html">FAQs</a></li>
-            </ul>
-        </div>
+      <div class="footer-adoption">
+        <h4>Adoption Info</h4>
+        <ul>
+          <li><a href="how-it-works.html">How it works?</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="FAQs.html">FAQs</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-contact">
-            <ul>
-                <li>📍 Birtamod, Jhapa</li>
-                <li>📞 9805534622</li>
-                <li>✉️ Adoptee@gmail.com</li>
-            </ul>
+      <div class="footer-contact">
+        <ul>
+          <li>📍 Birtamod, Jhapa</li>
+          <li>📞 9805534622</li>
+          <li>✉️ Adoptee@gmail.com</li>
+        </ul>
 
-            <div class="social-icons">
-                <a href="#"><img src="assets/images/pets/fb-removebg-preview (1).png"></a>
-                <a href="#"><img src="assets/images/pets/insta-removebg-preview.png"></a>
-                <a href="#"><img src="assets/images/pets/tt-removebg-preview.png"></a>
-            </div>
+        <div class="social-icons">
+          <a href="#" onclick="comingSoon(event)">
+            <img src="assets/images/pets/fb-removebg-preview (1).png">
+          </a>
+          <a href="#" onclick="comingSoon(event)">
+            <img src="assets/images/pets/insta-removebg-preview.png">
+          </a>
+          <a href="#" onclick="comingSoon(event)">
+            <img src="assets/images/pets/tt-removebg-preview.png">
+          </a>
         </div>
+      </div>
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026 Adoptee. All rights reserved.</p>
+      <p>© 2026 Adoptee. All rights reserved.</p>
     </div>
-</footer>
-
-<script src="assets/js/chewy.js"></script>
+  </footer>
+  <script src="assets/js/adopt.js"></script>
+  <script src="assets/js/chewy.js"></script>
 </body>
+
 </html>

@@ -7,7 +7,6 @@ function openForm() {
   document.body.style.overflow = "hidden";
 }
 
-
 // ==========================
 // CLOSE MODAL
 // ==========================
@@ -16,49 +15,6 @@ function closeForm() {
   modal.style.display = "none";
   document.body.style.overflow = "auto";
 }
-
-
-// ==========================
-// SUBMIT FORM (WITH VALIDATION)
-// ==========================
-function submitForm() {
-  const modal = document.getElementById("adoptModal");
-
-  const inputs = modal.querySelectorAll("input");
-  const textarea = modal.querySelector("textarea");
-
-  let isValid = true;
-
-  inputs.forEach(input => {
-    if (input.value.trim() === "") {
-      input.style.border = "2px solid red";
-      isValid = false;
-    } else {
-      input.style.border = "1px solid #ccc";
-    }
-  });
-
-  if (textarea.value.trim() === "") {
-    textarea.style.border = "2px solid red";
-    isValid = false;
-  } else {
-    textarea.style.border = "1px solid #ccc";
-  }
-
-  if (!isValid) {
-    alert("Please fill all fields 🐾");
-    return;
-  }
-
-  // Cute success animation/message
-  modal.querySelector(".modal-box").innerHTML = `
-    <h2>🎉 Yay!</h2>
-    <p>Your request for <strong>Polly 🐦</strong> has been sent!</p>
-    <p>We’ll contact you soon 💛</p>
-    <button onclick="closeForm()">Close</button>
-  `;
-}
-
 
 // ==========================
 // CLOSE ON OUTSIDE CLICK
@@ -70,7 +26,6 @@ window.addEventListener("click", function (e) {
   }
 });
 
-
 // ==========================
 // CLOSE WITH ESC KEY
 // ==========================
@@ -79,7 +34,6 @@ document.addEventListener("keydown", function (e) {
     closeForm();
   }
 });
-
 
 // ==========================
 // BUTTON CLICK ANIMATION
@@ -93,4 +47,30 @@ if (adoptBtn) {
       adoptBtn.style.transform = "scale(1)";
     }, 150);
   });
+}
+function comingSoon(e) {
+    e.preventDefault();
+
+    const popup = document.createElement("div");
+    popup.innerText = "🚧 Social Media Coming Soon!";
+
+    popup.style.position = "fixed";
+    popup.style.bottom = "30px";
+    popup.style.left = "50%";
+    popup.style.transform = "translateX(-50%)";
+
+    // 🎨 MATCH YOUR COLOR PALETTE
+    popup.style.background = "linear-gradient(135deg, #c9c05e, #c97a1c)";
+    popup.style.color = "#fff";
+    popup.style.padding = "14px 22px";
+    popup.style.borderRadius = "25px";
+    popup.style.fontSize = "14px";
+    popup.style.boxShadow = "0 5px 15px rgba(0,0,0,0.2)";
+    popup.style.zIndex = "9999";
+
+    document.body.appendChild(popup);
+
+    setTimeout(() => {
+        popup.remove();
+    }, 2000);
 }

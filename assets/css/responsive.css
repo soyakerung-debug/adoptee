@@ -1,173 +1,228 @@
-/* ===== GLOBAL MOBILE FIX ===== */
+/* =========================
+   TABLETS (≤1024px)
+========================= */
+@media (max-width: 1024px) {
+
+    /* NAV */
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* HERO */
+    .hero,
+    .cat-hero,
+    .dog-hero {
+        padding: 70px 30px;
+        text-align: center;
+    }
+
+    /* CARDS */
+    .animal-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .card,
+    .dog-card {
+        width: 100%;
+    }
+
+    /* ARTICLES */
+    .cat-article,
+    .dog-article {
+        gap: 20px;
+    }
+
+    /* ABOUT / FLEX SECTIONS */
+    .about-container,
+    .pet-container,
+    .signin-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* IMAGE FIX */
+    .about-image,
+    .pet-image {
+        margin: auto;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+/* =========================
+   MOBILE (≤768px)
+========================= */
 @media (max-width: 768px) {
 
-    /* ===== HEADER ===== */
+    /* HEADER */
     .header {
-        padding: 15px 20px;
+        padding: 15px;
     }
 
     .nav {
         flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-left,
-    .nav-right {
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 12px;
+        text-align: center;
     }
 
     .logo img {
         width: 60px;
     }
 
-    .btn {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-
-    /* ===== SEARCH ===== */
-    .search-container {
-        width: 90%;
-    }
-
-    .search-container input {
-        font-size: 14px;
-        padding: 10px 35px 10px 12px;
-    }
-
-    .search-icon img {
-        width: 25px;
-        height: 25px;
-    }
-
-    /* ===== HERO ===== */
-    .hero {
+    /* HERO */
+    .hero,
+    .cat-hero,
+    .dog-hero {
         padding: 50px 20px;
-        margin: 20px;
-        border-radius: 20px;
+        border-radius: 15px;
     }
 
-    .hero h1 {
-        font-size: 22px;
+    .hero h1,
+    .cat-hero h1,
+    .dog-hero h1 {
+        font-size: 24px;
     }
 
-    /* ===== ANIMAL CARDS ===== */
+    /* CARDS */
     .animal-cards {
+        grid-template-columns: 1fr;
         gap: 15px;
     }
 
-    .card {
-        width: 100px;
-        height: 120px;
-    }
-
-    .card img {
-        width: 45px;
-    }
-
-    .card p {
-        font-size: 12px;
-    }
-
-    /* ===== ARTICLES ===== */
-    .articles {
-        padding: 60px 10px;
-    }
-
-    .article-card {
+    .card,
+    .dog-card {
         width: 100%;
-        max-width: 320px;
+        height: auto;
+        padding: 15px;
+    }
+
+    /* ARTICLES (MOST IMPORTANT) */
+    .cat-article,
+    .dog-article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cat-article.reverse,
+    .dog-article.reverse {
+        flex-direction: column;
+    }
+
+    .cat-article img,
+    .dog-article img {
+        width: 100%;
         height: auto;
     }
 
-    .article-img {
-        width: 110px;
-        height: 110px;
+    .cat-text,
+    .dog-text {
+        text-align: left;
     }
 
-    .article-content h2 {
-        font-size: 16px;
-    }
-
-    .article-content p {
-        font-size: 13px;
-    }
-
-    /* ===== ABOUT ===== */
-    .about-container {
+    /* SIGNIN / AUTH */
+    .signin-container {
         flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
+        margin: 20px;
     }
 
-    .about-image {
-        width: 200px;
-    }
-
-    .img-main {
+    .signin-image {
+        width: 100%;
         height: 200px;
     }
 
-    .about h2 {
-        font-size: 26px;
-    }
-
-    .about p {
-        font-size: 14px;
-    }
-
-    /* ===== REVIEWS ===== */
-    .review-container {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .review-card {
+    .signin-form {
         width: 100%;
-        max-width: 320px;
+        padding: 30px 20px;
     }
 
-    /* ===== FOOTER ===== */
-    .footer {
+    /* PET DETAIL PAGES */
+    .pet-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pet-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* GENERAL CONTAINERS */
+    .container,
+    .section {
         padding: 20px;
     }
 
+    /* ABOUT */
+    .about-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-image {
+        width: 180px;
+    }
+
+    /* FOOTER */
     .footer-container {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
-    }
-
-    .footer-about img {
-        width: 70px;
-    }
-
-    .footer-about p {
-        font-size: 12px;
-    }
-
-    .footer-links h4,
-    .footer-adoption h4 {
-        font-size: 13px;
-    }
-
-    .footer-links ul li,
-    .footer-adoption ul li,
-    .footer-contact ul li {
-        font-size: 12px;
     }
 
     .social-icons {
         justify-content: center;
     }
+}
 
-    .social-icons img {
-        width: 30px;
+
+/* =========================
+   SMALL MOBILE (≤480px)
+========================= */
+@media (max-width: 480px) {
+
+    /* HERO TEXT */
+    .hero h1,
+    .cat-hero h1,
+    .dog-hero h1 {
+        font-size: 20px;
     }
 
+    .hero p {
+        font-size: 13px;
+    }
+
+    /* TEXT */
+    p {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    /* BUTTONS */
+    .pill-btn,
+    .nav-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    /* CARDS */
+    .card p,
+    .dog-card p {
+        font-size: 12px;
+    }
+
+    /* FOOTER */
     .footer-bottom {
-        font-size: 11px;
+        font-size: 10px;
     }
 }
